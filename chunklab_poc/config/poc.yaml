@@ -1,0 +1,70 @@
+# PoC: circuito completo sobre un corpus reducido. Config REAL (modelo e5-base).
+# Todo lo que afecta el resultado entra en los hashes del manifiesto.
+run:
+  label: "poc_v1_e5"
+  seed: 42
+  output_dir: "../runs"
+
+corpus:
+  # documents_dir: "../data/corpus"   # carpeta con los .txt (relativa a este archivo)
+  documents_dir: "C:/LC"
+  max_documents: 20
+  pattern: "*.txt"
+  # max_documents: null
+  sample_seed: 42
+  # document_list: "../data/doc_ids.txt"   # un doc_id por linea (sin .txt); anula max_documents
+
+embedding:
+  backend: "sentence-transformers"
+  model: "intfloat/multilingual-e5-base"
+  # revision: null          # RECOMENDADO: fijar el commit del modelo (pagina del modelo en HuggingFace)
+  revision: "d128750597153bb5987e10b1c3493a34e5a4502a"
+  device: "cpu"
+  batch_size: 16
+  # Prefijo para embeddings de ORACIONES (similitud simetrica: CS y segmentacion semantica).
+  # e5 indica "query: " para tareas simetricas. Fijado aqui, una sola vez, para todo el proyecto.
+  sentence_prefix: "query: "
+
+common:
+  min_tokens: 64
+  max_tokens: 256
+  safety_margin_tokens: 8
+
+sentences:
+  extra_abbreviations: []
+
+strategies:
+  fixed:
+    kind: fixed_tokens
+    window_tokens: 256
+    overlap_tokens: 50
+  semantic:
+    kind: semantic_dp
+    min_sentences: 3
+    max_sentences: 15
+    ideal_sentences: 9
+    lam: 0.4
+    objective: sentence_weighted
+  louvain:
+    kind: louvain_graph
+    tau: 0.72
+    gamma: 1.0
+    window: null
+    contiguous: false
+  legal:
+    kind: legal_structural
+    min_sentences: 3
+    max_sentences: 15
+    ideal_sentences: 9
+    lam: 0.4
+    objective: sentence_weighted
+    min_section_tokens: 12
+
+poc:
+  questions_csv: "../data/preguntas_muestra_30.csv"   # o preguntas.csv (100)
+  ks: [1, 3, 5]
+  chunk_prefix: "passage: "     # e5: prefijo de documentos en recuperacion
+  query_prefix: "query: "       # e5: prefijo de preguntas
+  selector:
+    # Umbral PROVISIONAL fijado a priori (no calibrado). null = regla R2 desactivada.
+    cs_low: 0.80

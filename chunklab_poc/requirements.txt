@@ -1,0 +1,11 @@
+# Dependencias minimas. Despues de instalar y ANTES de la corrida real, guardar el entorno exacto:
+#   pip freeze > requirements.lock
+# y conservar ese archivo junto con la carpeta runs/ de la corrida.
+numpy>=1.26,<3
+PyYAML>=6,<7
+networkx>=3.2,<4
+tqdm>=4.66,<5
+transformers>=4.40
+sentence-transformers>=3.0,<6
+torch>=2.2
+pytest>=8

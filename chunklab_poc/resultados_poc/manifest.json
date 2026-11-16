@@ -1,0 +1,104 @@
+{
+  "chunklab": "1.1.0",
+  "exported_utc": "2026-11-16T09:32:54.761439+00:00",
+  "python": "3.13.12",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "libraries": {
+    "numpy": "2.5.4",
+    "PyYAML": "6.0.3",
+    "networkx": "3.7",
+    "transformers": "5.23.0",
+    "sentence-transformers": "5.7.0",
+    "torch": "2.15.0",
+    "tqdm": "4.70.1"
+  },
+  "config_hash": "2b53681f8345cd96bc0d0e2963f7d447b0cc84ac39c0424ae64d2eb3da5ed928",
+  "config": {
+    "run": {
+      "label": "poc_v1_e5",
+      "seed": 42,
+      "output_dir": "../runs"
+    },
+    "corpus": {
+      "documents_dir": "C:/LC",
+      "max_documents": 20,
+      "pattern": "*.txt",
+      "sample_seed": 42
+    },
+    "embedding": {
+      "backend": "sentence-transformers",
+      "model": "intfloat/multilingual-e5-base",
+      "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+      "device": "cpu",
+      "batch_size": 16,
+      "sentence_prefix": "query: "
+    },
+    "common": {
+      "min_tokens": 64,
+      "max_tokens": 256,
+      "safety_margin_tokens": 8
+    },
+    "sentences": {
+      "extra_abbreviations": []
+    },
+    "strategies": {
+      "fixed": {
+        "kind": "fixed_tokens",
+        "window_tokens": 256,
+        "overlap_tokens": 50
+      },
+      "semantic": {
+        "kind": "semantic_dp",
+        "min_sentences": 3,
+        "max_sentences": 15,
+        "ideal_sentences": 9,
+        "lam": 0.4,
+        "objective": "sentence_weighted"
+      },
+      "louvain": {
+        "kind": "louvain_graph",
+        "tau": 0.72,
+        "gamma": 1.0,
+        "window": null,
+        "contiguous": false
+      },
+      "legal": {
+        "kind": "legal_structural",
+        "min_sentences": 3,
+        "max_sentences": 15,
+        "ideal_sentences": 9,
+        "lam": 0.4,
+        "objective": "sentence_weighted",
+        "min_section_tokens": 12
+      }
+    },
+    "poc": {
+      "questions_csv": "../data/preguntas_muestra_30.csv",
+      "ks": [
+        1,
+        3,
+        5
+      ],
+      "chunk_prefix": "passage: ",
+      "query_prefix": "query: ",
+      "selector": {
+        "cs_low": 0.8
+      }
+    }
+  },
+  "n_docs_exported": 20,
+  "corpus_fingerprint": "6bd44ec6631e88690658c15d7b0a1e0f7d2db7f29006dbbc2da36e3b693d11cc",
+  "strategies": [
+    "fixed",
+    "legal",
+    "louvain",
+    "semantic"
+  ],
+  "run_summary": {
+    "processed": 20,
+    "skipped": 0,
+    "failed": 0
+  },
+  "embedder": "sentence-transformers|intfloat/multilingual-e5-base|d128750597153bb5987e10b1c3493a34e5a4502a|query: |768",
+  "hard_limit": 507
+}

@@ -1,0 +1,49 @@
+{
+  "chunklab": "1.1.0",
+  "run_utc": "2026-11-16T09:40:25.183502+00:00",
+  "python": "3.13.12",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "libraries": {
+    "numpy": "2.5.4",
+    "PyYAML": "6.0.3",
+    "networkx": "3.7",
+    "transformers": "5.23.0",
+    "sentence-transformers": "5.7.0",
+    "torch": "2.15.0",
+    "tqdm": "4.70.1"
+  },
+  "simulacro_sin_validez_cientifica": false,
+  "modelo": "intfloat/multilingual-e5-base",
+  "modelo_revision_fijada": true,
+  "embedder": "sentence-transformers|intfloat/multilingual-e5-base|d128750597153bb5987e10b1c3493a34e5a4502a|query: |768",
+  "config_hash": "2b53681f8345cd96bc0d0e2963f7d447b0cc84ac39c0424ae64d2eb3da5ed928",
+  "poc_hash": "288dc9c8b2495c78c88f91eb6d21320c4809e90f9ad6ebf26bdccbfed6c60f17",
+  "poc": {
+    "questions_csv": "C:\\Users\\Julio\\Desktop\\PruebadeConcepto2027\\Tesis\\chunklab_poc\\data\\preguntas_muestra_30.csv",
+    "ks": [
+      1,
+      3,
+      5
+    ],
+    "chunk_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "selector": {
+      "cs_low": 0.8
+    }
+  },
+  "corpus_documentos": 20,
+  "corpus_fingerprint": "6bd44ec6631e88690658c15d7b0a1e0f7d2db7f29006dbbc2da36e3b693d11cc",
+  "preguntas": 30,
+  "preguntas_sha256": "a39cb7c6104761ca1768f335b3aaa04975efc04dce310b2dde641dd20d198653",
+  "versiones": {
+    "shard_schema": 2,
+    "headings": "1.0",
+    "segmentador_oraciones": "1.0",
+    "profiling": "1.0",
+    "selector": "1.0",
+    "evidencia": "1.0",
+    "recuperacion": "1.0"
+  },
+  "pares_posibles": 600,
+  "pares_con_evidencia": 232
+}

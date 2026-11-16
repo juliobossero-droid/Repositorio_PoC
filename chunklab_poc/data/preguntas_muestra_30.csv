@@ -1,0 +1,31 @@
+id,categoria,pregunta,keywords
+1,Pena,¿Qué pena cumple?,pena|condena|años de prisión|accesorias legales y costas|fue condenado|condenado a la pena|sanción penal
+5,Pena,¿Qué tribunal dictó la condena?,tribunal en lo criminal|juzgado en lo correccional|tribunal
+8,Pena,¿La condena es de cumplimiento efectivo?,prisión efectiva|cumplimiento efectivo
+11,Vencimiento,¿Cuándo vencerá la pena?,vencerá el|vencerá en|pena vence en|vencimiento de pena
+13,Vencimiento,¿Existe cómputo de pena?,cómputo de pena|computo de pena
+20,Vencimiento,¿Qué tiempo efectivo lleva detenido?,tiempo cumplido|privado de su libertad
+21,Delitos,¿Por qué delito fue condenado?,delito de|por el delito
+24,Delitos,¿Existen delitos múltiples?,delitos de|concurso real|concurso ideal
+27,Delitos,¿Hubo tentativa?,grado de tentativa|tentativa
+31,Ley,¿Qué ley resulta aplicable?,corresponde aplicar|normativa aplicable|rige la ley
+33,Ley,¿Se aplica el artículo 13 del Código Penal?,art. 13|artículo 13
+38,Ley,¿Se cita la Ley 24.660?,ley 24.660
+41,Reincidencia,¿Fue declarado reincidente?,fue declarado reincidente|es reincidente
+43,Reincidencia,¿Posee antecedentes penales?,antecedentes penales
+48,Reincidencia,¿Incumplió beneficios previos?,quebrantó|revocación
+51,Temporal,¿Cumple el requisito temporal?,requisito temporal|presupuesto temporal
+53,Temporal,¿Cumplió dos tercios de la pena?,dos tercios
+59,Temporal,¿Se encuentra privado de libertad?,privado de su libertad
+61,Conducta,¿Cómo es su conducta?,conducta calificada|posee una conducta|registra una conducta
+64,Conducta,¿Posee concepto bueno?,concepto bueno
+65,Conducta,¿Registra sanciones disciplinarias?,sanciones disciplinarias|sanción disciplinaria
+71,Actividades,¿Realiza actividades?,trabaja|estudia|actividades tratamentales
+74,Actividades,¿Participa en actividades tratamentales?,actividades tratamentales|tareas tratamentales
+81,Psicologico,¿Existe informe psicológico?,espacio psicológico|informe psicológico
+83,Psicologico,¿Existe abordaje psicológico?,abordaje psicológico
+86,Psicologico,¿Presenta autocrítica?,autocrítica
+91,Social,¿Cómo está el aspecto social?,socioambiental|domicilio propuesto|red de contención|grupo familiar
+94,Social,¿Cuenta con una red de contención?,red de contención
+95,Social,¿Cuenta con grupo familiar de apoyo?,grupo familiar
+100,Criminologico,¿Cuál fue el pronóstico criminológico?,pronóstico|dictamen|reinserción social|prognosis|informe criminológico|dtc|departamento técnico criminológico|viable|inviable|viabilidad|inviabilidad|conveniente|inconveniente

@@ -1,0 +1,7 @@
+# Datos confidenciales: NO publicar documentos judiciales ni resultados que contengan su texto
+data/corpus/*.txt
+runs/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+requirements.lock.tmp
